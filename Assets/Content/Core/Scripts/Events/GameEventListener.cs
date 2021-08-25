@@ -13,11 +13,22 @@ namespace Core.Events
         [SerializeField]
         private UnityEvent response = default;
 
-        public void OnEventRaised()
+        private void OnEnable()
         {
             if (gameEvent == null)
-                throw new System.NullReferenceException($"{nameof(GameEventListener)} on {gameObject.name} {nameof(GameEvent)} ref is null");
+                throw new System.NullReferenceException($"GameEventListener on {this.gameObject.name} Event ref is null");
             gameEvent.RegisterListener(this);
+        }
+
+        private void OnDisable()
+        {
+            gameEvent.UnregisterListener(this);
+        }
+
+        public void OnEventRaised()
+        {
+            if (response != default)
+                response.Invoke();
         }
     }
 }

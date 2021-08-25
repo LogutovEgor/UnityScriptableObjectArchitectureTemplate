@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Sample
 {
+    [CreateAssetMenu(menuName = nameof(Sample) + "/" + nameof(EnemyCharacter))]
     public class EnemyCharacter : ScriptableObject, ICharacter
     {
         [SerializeField]
@@ -27,6 +28,16 @@ namespace Sample
         public void Reset()
         {
             healthPoints = StartHealthPoints;
+        }
+
+        public ICharacter Clone()
+        {
+            TemporaryCharacter temporaryCharacter =
+                new TemporaryCharacter()
+                .SetStartHealthPoints(StartHealthPoints)
+                .SetStartDamagePoints(DamagePoints)
+                .SetCharacterPrefab(CharacterPrefab);
+            return temporaryCharacter;
         }
     }
 }

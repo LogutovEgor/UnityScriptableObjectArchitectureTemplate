@@ -20,8 +20,8 @@ namespace Sample
         public PlayerCharacter PlayerCharacter => playerCharacter;
         
         [SerializeField]
-        private CharacterBehaviour[] possibleEnemiesPrefabs = default;
-        public CharacterBehaviour[] PossibleEnemiesPrefabs => possibleEnemiesPrefabs;
+        private EnemyCharacter[] possibleEnemies = default;
+        public EnemyCharacter[] PossibleEnemies => possibleEnemies;
 
         
     }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 namespace Core.Save
 {
@@ -28,7 +29,38 @@ namespace Core.Save
         }
 
 
-        public override T GetValue<T>(string id) => PlayerPrefs.HasKey(id) ? JsonUtility.FromJson<T>(PlayerPrefs.GetString(id)) : default;
-        public override void SetValue<T>(string id, T value) => PlayerPrefs.SetString(id, JsonUtility.ToJson(value));
+        //public override T GetValue<T>(string id) => PlayerPrefs.HasKey(id) ? JsonUtility.FromJson<T>(PlayerPrefs.GetString(id)) : default;
+        //public override void SetValue<T>(string id, T value) => PlayerPrefs.SetString(id, JsonUtility.ToJson(value));
+
+        [Serializable]
+        private class JsonWrapper<T>
+        {
+            [SerializeField]
+            private T value = default;
+            public T Value => value;
+
+            public JsonWrapper(T value) => this.value = value;
+        }
+
+        public override T GetValue<T>(string id)
+        {
+            if (PlayerPrefs.HasKey(id))
+            {
+                string json = PlayerPrefs.GetString(id);
+                JsonWrapper<T> jsonWrapper = JsonUtility.FromJson<JsonWrapper<T>>(json);
+                return jsonWrapper.Value;
+            }
+            else
+            {
+                return default;
+            }
+        }
+
+        public override void SetValue<T>(string id, T value)
+        {
+            JsonWrapper<T> jsonWrapper = new JsonWrapper<T>(value);
+            string json = JsonUtility.ToJson(jsonWrapper);
+            PlayerPrefs.SetString(id, json);
+        }
     }
 }

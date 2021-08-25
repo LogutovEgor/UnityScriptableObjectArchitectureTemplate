@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &840595692586822067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31141196145790523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802403c0bab7ad94499e02573b87f2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAttackEvent: {fileID: 11400000, guid: f068b018d33c19047a4c64938888998e, type: 2}
 --- !u!1001 &7093441188410195555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,6 +20,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1345091853229844342, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7070182941687683892, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -63,5 +80,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8446578784319145256, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
+--- !u!1 &31141196145790523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7070182941958533208, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
+  m_PrefabInstance: {fileID: 7093441188410195555}
+  m_PrefabAsset: {fileID: 0}

@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331586338633079915}
   - component: {fileID: 331586338633079924}
+  - component: {fileID: 1613024981999459097}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -114,6 +115,34 @@ MonoBehaviour:
   - {fileID: 331586338926472527}
   - {fileID: 331586338015666465}
   - {fileID: 331586338645870800}
+--- !u!114 &1613024981999459097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331586338633079914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018211e35c097664c92459dd65c1014d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: bdb947ffb061a76488d8971d73f64360, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 331586338633079924}
+        m_TargetAssemblyTypeName: Sample.LevelBehaviour, Assembly-CSharp
+        m_MethodName: CharacterDeathEventResponse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: bdb947ffb061a76488d8971d73f64360, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Sample.Events.CharacterDeathEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &331586338645870807
 GameObject:
   m_ObjectHideFlags: 0

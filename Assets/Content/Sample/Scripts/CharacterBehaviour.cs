@@ -1,12 +1,22 @@
 using UnityEngine;
 using Core;
+using Sample.Events;
+
 namespace Sample
 {
     [RequireComponent(typeof(Animator))]
     public class CharacterBehaviour : MonoBehaviour, IInitialize<ICharacter>
     {
+        [SerializeField]
+        private CharacterDeathEvent characterDeathEvent = default;
+        [SerializeField]
+        private string damagedAnimName = default;
+        [SerializeField]
+        private string deathAnimName = default;
+
         private Animator animator = default;
         private ICharacter character = default;
+        public ICharacter Character => character;
 
         public void Initialize(ICharacter character)
         {
@@ -18,11 +28,23 @@ namespace Sample
             animator = GetComponent<Animator>();
         }
 
-        void Update()
+        public void CharacterAttackEventResponse(CharacterAttackEvent characterAttackEvent)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-                animator.Play("Damaged");
+            if (characterAttackEvent.Target == this && character.HealthPoints > 0)
+            {
+                character.HealthPoints -= (int)characterAttackEvent.Attacker.character.DamagePoints;
+                if (character.HealthPoints > 0)
+                {
+                    animator.Play(damagedAnimName);
+                }
+                else
+                {
+                    characterDeathEvent.Raise(this);
+                    animator.Play(deathAnimName);
+                }
+            }
         }
 
+        public void OnDeathAnimEnd() => Destroy(gameObject);
     }
 }

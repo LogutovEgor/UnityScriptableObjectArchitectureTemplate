@@ -13,16 +13,20 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ac9614506e521254190b752422c752ab, type: 3}
     - target: {fileID: 7070182941687683893, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7070182941687683893, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7070182941958533208, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
       propertyPath: m_Name
       value: Chort
       objectReference: {fileID: 0}
+    - target: {fileID: 7070182941958533209, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 0bb14be4f4274394a8536fcde6e40eeb, type: 2}
     - target: {fileID: 7070182941958533210, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -1,3 +1,5 @@
+using System;
+
 namespace Sample {
     public interface ICharacter
     {
@@ -8,5 +10,7 @@ namespace Sample {
         public int Level { get; set; }
 
         public CharacterBehaviour CharacterPrefab { get; }
+
+        public ICharacter Clone();
     }
 }

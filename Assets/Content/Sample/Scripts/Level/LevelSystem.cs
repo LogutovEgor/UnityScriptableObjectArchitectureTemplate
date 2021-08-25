@@ -17,5 +17,7 @@ namespace Sample
             currentLevel = Instantiate(levelInfo.LevelPrefab.gameObject).GetComponent<LevelBehaviour>();
             currentLevel.Initialize(levelInfo);
         }
+
+        public int GetCurrentLevelRemainingEnemiesCount() => currentLevel.LevelInfo.EnemiesQuantity - currentLevel.EnemiesDefeatedNumber;
     }
 }

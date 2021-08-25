@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Core.Save;
 using System;
@@ -50,6 +48,16 @@ namespace Sample
         public void Reset()
         {
             healthPoints = StartHealthPoints;
+        }
+
+        public ICharacter Clone()
+        {
+            TemporaryCharacter temporaryCharacter = 
+                new TemporaryCharacter()
+                .SetStartHealthPoints(StartHealthPoints)
+                .SetStartDamagePoints(DamagePoints)
+                .SetCharacterPrefab(CharacterPrefab);
+            return temporaryCharacter;
         }
     }
 }

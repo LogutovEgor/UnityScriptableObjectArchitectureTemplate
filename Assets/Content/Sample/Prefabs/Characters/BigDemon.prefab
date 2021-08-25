@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigDemon
       objectReference: {fileID: 0}
+    - target: {fileID: 7070182941958533209, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: a9160d263dda44f4ea47128b949d124b, type: 2}
     - target: {fileID: 7070182941958533210, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
       propertyPath: m_RootOrder
       value: 0
