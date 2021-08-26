@@ -36,7 +36,12 @@ namespace Sample
 
 
 
-        private void SpawnPlayer() => player = SpawnCharacter(playerSpawn, levelInfo.PlayerCharacter);
+        private void SpawnPlayer() 
+        {
+            levelInfo.PlayerCharacter.Reset();
+            player = SpawnCharacter(playerSpawn, levelInfo.PlayerCharacter); 
+        }
+
 
         private void SpawnEnemy()
         {
@@ -47,6 +52,7 @@ namespace Sample
             ICharacter characterInfo = GetRandomEnemyCloneInfo();
 
             CharacterBehaviour character = SpawnCharacter(spawn, characterInfo);
+            character.GetComponent<EnemyLogic>().Initialize(player);
             enemies.Add((spawn, character));
         }
 

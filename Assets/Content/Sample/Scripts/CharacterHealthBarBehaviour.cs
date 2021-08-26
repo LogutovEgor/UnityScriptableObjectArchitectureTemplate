@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Sample.Events;
 
 namespace Sample
 {
@@ -18,8 +19,10 @@ namespace Sample
             startWidth = healthBarLine.size.x;
         }
 
-        void Update()
+        public void UpdateHealthBar(CharacterReceivedDamageEvent characterReceivedDamageEvent)
         {
+            if (characterReceivedDamageEvent.Target != character)
+                return;
             if (character.Character.HealthPoints <= 0)
                 Destroy(gameObject);
             else if (character.Character.HealthPoints >= character.Character.StartHealthPoints)

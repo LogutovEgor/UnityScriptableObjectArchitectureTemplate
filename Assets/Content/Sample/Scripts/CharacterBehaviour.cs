@@ -10,6 +10,8 @@ namespace Sample
         [SerializeField]
         private CharacterDeathEvent characterDeathEvent = default;
         [SerializeField]
+        private CharacterReceivedDamageEvent characterReceivedDamageEvent = default;
+        [SerializeField]
         private string damagedAnimName = default;
         [SerializeField]
         private string deathAnimName = default;
@@ -33,6 +35,7 @@ namespace Sample
             if (characterAttackEvent.Target == this && character.HealthPoints > 0)
             {
                 character.HealthPoints -= (int)characterAttackEvent.Attacker.character.DamagePoints;
+                characterReceivedDamageEvent.Raise(this);
                 if (character.HealthPoints > 0)
                 {
                     animator.Play(damagedAnimName);

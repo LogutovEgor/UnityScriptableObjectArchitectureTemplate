@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using Sample.Events;
 
 namespace Sample
 {
@@ -17,7 +18,7 @@ namespace Sample
             _ = healthBarLine ?? throw new NullReferenceException($"{nameof(PlayerHealthBarBehaviour)} requires a ref to {nameof(Image)} of health bar.");
         }
 
-        void Update()
+        public void UpdateHealthBar()
         {
             if (playerCharacter.HealthPoints < 0)
                 healthBarLine.fillAmount = 0f;

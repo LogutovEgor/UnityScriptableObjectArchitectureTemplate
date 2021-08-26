@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterDeathEvent: {fileID: 11400000, guid: bdb947ffb061a76488d8971d73f64360, type: 2}
+  characterReceivedDamageEvent: {fileID: 11400000, guid: cb62991f0d73b7d4e9f5da8896e5a294, type: 2}
   damagedAnimName: Damaged
   deathAnimName: Death
 --- !u!61 &1345091853229844342
@@ -380,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3397146147954738100}
   - component: {fileID: 1894510419819067868}
+  - component: {fileID: 6401980442522460261}
   m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
@@ -417,3 +419,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 727873362061551896}
   healthBarLine: {fileID: 2183648170191342851}
+--- !u!114 &6401980442522460261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446578784319145256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018211e35c097664c92459dd65c1014d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: cb62991f0d73b7d4e9f5da8896e5a294, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1894510419819067868}
+        m_TargetAssemblyTypeName: Sample.CharacterHealthBarBehaviour, Assembly-CSharp
+        m_MethodName: UpdateHealthBar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cb62991f0d73b7d4e9f5da8896e5a294, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Sample.Events.CharacterReceivedDamageEvent,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

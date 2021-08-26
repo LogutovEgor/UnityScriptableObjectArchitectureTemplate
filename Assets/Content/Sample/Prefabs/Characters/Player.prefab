@@ -20,6 +20,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 727873362061551896, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
+      propertyPath: characterReceivedDamageEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: f4fb6ab2b2808a5418e8f1291ba12194, type: 2}
     - target: {fileID: 1345091853229844342, guid: 56728b109cce6324e91e6551e402b5e2, type: 3}
       propertyPath: m_AutoTiling
       value: 0
