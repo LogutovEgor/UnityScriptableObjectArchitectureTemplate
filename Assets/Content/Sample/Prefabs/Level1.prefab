@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad006a0fa2c7e3f4e8ff2ae850aa810f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerVictoryEvent: {fileID: 11400000, guid: 7d1ac69b823c84d4fbaec5c861742850, type: 2}
+  playerLoseEvent: {fileID: 11400000, guid: b7a562abb8eb6d444af6887fa3d9db5a, type: 2}
   playerSpawn: {fileID: 331586339853536885}
   enemySpawns:
   - {fileID: 331586338592955188}

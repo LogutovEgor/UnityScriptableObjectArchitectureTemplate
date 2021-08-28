@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveSystem: {fileID: 11400000, guid: 342e8a9e807bfa748a79cbca0bed3e6c, type: 2}
+  userPickedUpCoin: {fileID: 11400000, guid: 53c7797fb4c6ec24c8995b69aaba2d28, type: 2}
   pickUpAnimName: PickUp
 --- !u!1 &1385268443134240189
 GameObject:

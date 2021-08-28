@@ -10,12 +10,11 @@ namespace Sample {
 
         private int healthPoints = default;
         public int HealthPoints { get => healthPoints; set => healthPoints = value; }
+        public int HealthPointsLevel { get; set; } = default;
 
         private float damagePoints = default;
         public float DamagePoints => damagePoints;
-
-        private int level = default;
-        public int Level { get => level; set => level = value; }
+        public int DamagePointsLevel { get; set; } = default;
 
         private CharacterBehaviour characterPrefab = default;
         public CharacterBehaviour CharacterPrefab => characterPrefab; 

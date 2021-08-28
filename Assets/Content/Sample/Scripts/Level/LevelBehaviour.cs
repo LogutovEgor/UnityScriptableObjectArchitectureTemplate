@@ -4,11 +4,17 @@ using UnityEngine;
 using Core;
 using System.Linq;
 using Sample.Events;
+using Core.Events;
 
 namespace Sample
 {
     public class LevelBehaviour : MonoBehaviour, IInitialize<LevelInfo>
     {
+        [SerializeField]
+        private GameEvent playerVictoryEvent = default;
+        [SerializeField]
+        private GameEvent playerLoseEvent = default;
+
         [SerializeField]
         private Transform playerSpawn = default;
         private CharacterBehaviour player = default;
@@ -85,7 +91,10 @@ namespace Sample
                 throw new System.Exception($"Empty {levelInfo.PossibleEnemies} array.");
 
             int randomIndex = Random.Range(0, levelInfo.PossibleEnemies.Length);
-            return levelInfo.PossibleEnemies[randomIndex].Clone();
+            EnemyCharacter enemyCharacter = levelInfo.PossibleEnemies[randomIndex];
+            enemyCharacter.DamagePointsLevel = levelInfo.EnemiesLevel;
+            enemyCharacter.HealthPointsLevel = levelInfo.EnemiesLevel;
+            return enemyCharacter.Clone();
         }
 
         public void CharacterDeathEventResponse(CharacterDeathEvent characterDeathEvent)
@@ -101,6 +110,12 @@ namespace Sample
                 enemiesDefeatedNumber++;
                 if (enemiesDefeatedNumber < levelInfo.EnemiesQuantity)
                     SpawnEnemy();
+                else
+                    playerVictoryEvent.Raise();
+            }
+            else if (characterDeathEvent.Target == player)
+            {
+                playerLoseEvent.Raise();
             }
         }
     }

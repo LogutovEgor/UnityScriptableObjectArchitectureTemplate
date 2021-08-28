@@ -61,10 +61,12 @@
     <Compile Include="Assets\Content\Sample\Scripts\PlayerHealthBarBehaviour.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\EnemyLogic.cs" />
     <Compile Include="Assets\Content\Core\Scripts\Events\IEventListener.cs" />
+    <Compile Include="Assets\Content\Sample\Scripts\UI\PlayerDamagePointsUpgradePanel.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\StartUp.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\UserLogic.cs" />
     <Compile Include="Assets\Content\Core\Scripts\UI\UISystem.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\TemporaryCharacter.cs" />
+    <Compile Include="Assets\Content\Sample\Scripts\UI\PlayerHealthPointsUpgradePanel.cs" />
     <Compile Include="Assets\Content\Core\Scripts\Events\GameEventListener.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\EnemyCharacter.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\Level\LevelBehaviour.cs" />
@@ -80,14 +82,15 @@
     <Compile Include="Assets\Content\Core\Scripts\IInitialize.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\Events\CharacterDeathEvent.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\ICharacter.cs" />
+    <Compile Include="Assets\Content\Sample\Scripts\Events\CharacterReceivedDamageEvent.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\UI\LevelPage.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\CharacterHealthBarBehaviour.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\CharacterBehaviour.cs" />
     <Compile Include="Assets\Content\Core\Scripts\Events\GameEvent.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\Coin.cs" />
-    <Compile Include="Assets\Content\Core\Scripts\UI\CanvasUISystem.cs" />
-    <Compile Include="Assets\Content\Sample\Scripts\Events\CharacterReceivedDamageEvent.cs" />
     <Compile Include="Assets\Content\Sample\Scripts\CoinsSpawner.cs" />
+    <Compile Include="Assets\Content\Core\Scripts\UI\CanvasUISystem.cs" />
+    <Compile Include="Assets\Content\Sample\Scripts\UI\LevelResultPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -8,8 +8,16 @@ namespace Sample
     public class LevelInfo : ScriptableObject
     {
         [SerializeField]
+        private string displayName = default;
+        public string DisplayName => displayName;
+
+        [SerializeField]
         private int enemiesQuantity = default;
         public int EnemiesQuantity => enemiesQuantity;
+
+        [SerializeField]
+        private int enemiesLevel = default;
+        public int EnemiesLevel => enemiesLevel;
 
         [SerializeField]
         private LevelBehaviour levelPrefab = default;
@@ -21,8 +29,6 @@ namespace Sample
         
         [SerializeField]
         private EnemyCharacter[] possibleEnemies = default;
-        public EnemyCharacter[] PossibleEnemies => possibleEnemies;
-
-        
+        public EnemyCharacter[] PossibleEnemies => possibleEnemies;   
     }
 }

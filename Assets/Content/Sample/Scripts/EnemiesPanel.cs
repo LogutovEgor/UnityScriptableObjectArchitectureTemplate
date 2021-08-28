@@ -16,19 +16,19 @@ namespace Sample.UI
 
         private StringBuilder stringBuilder = default;
 
-        private int prevRemainingEnemiesCountValue = default;
-
-        private void Awake() => stringBuilder = new StringBuilder();
-
-        private void Update()
+        private void Awake()
         {
-            int currentRemainingEnemiesCount = levelSystem.GetCurrentLevelRemainingEnemiesCount();
-            if (currentRemainingEnemiesCount == prevRemainingEnemiesCountValue)
-                return;
+            stringBuilder = new StringBuilder();
             stringBuilder.Clear();
-            stringBuilder.AppendFormat(contentFormatString, currentRemainingEnemiesCount);
+            stringBuilder.AppendFormat(contentFormatString, levelSystem.GetCurrentLevelRemainingEnemiesCount());
             content.text = stringBuilder.ToString();
-            prevRemainingEnemiesCountValue = currentRemainingEnemiesCount;
+        }
+
+        public void UpdatePanel()
+        {
+            stringBuilder.Clear();
+            stringBuilder.AppendFormat(contentFormatString, levelSystem.GetCurrentLevelRemainingEnemiesCount() - 1);
+            content.text = stringBuilder.ToString();
         }
     }
 }

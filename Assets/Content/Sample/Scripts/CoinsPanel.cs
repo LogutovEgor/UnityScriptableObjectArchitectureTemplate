@@ -17,19 +17,17 @@ namespace Sample.UI
 
         private StringBuilder stringBuilder = default;
 
-        private int prevCoinsValue = default;
-
-        private void Awake() => stringBuilder = new StringBuilder();
-
-        private void Update()
+        private void Awake()
         {
-            int currentCoinsValue = saveSystem.Coins;
-            //if (currentCoinsValue == prevCoinsValue)
-            //    return;
+            stringBuilder = new StringBuilder();
+            UpdatePanel();
+        }
+
+        public void UpdatePanel()
+        {
             stringBuilder.Clear();
-            stringBuilder.AppendFormat(contentFormatString, prevCoinsValue);
+            stringBuilder.AppendFormat(contentFormatString, saveSystem.Coins);
             content.text = stringBuilder.ToString();
-            prevCoinsValue = currentCoinsValue;
         }
     }
 }

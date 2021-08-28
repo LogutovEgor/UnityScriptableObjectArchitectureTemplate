@@ -19,3 +19,7 @@ MonoBehaviour:
     prefab: {fileID: 1283016079528949460, guid: 3efa412b19cc83842b1d0f08f2d71cb4, type: 3}
   - id: level
     prefab: {fileID: 1874820124788738952, guid: e2d67454493d86a47bec4e0e456e55ee, type: 3}
+  - id: upgrades
+    prefab: {fileID: 7414305422495487716, guid: 74e4819ac2b1bf24fa62ccdeaa225f4e, type: 3}
+  - id: result
+    prefab: {fileID: 5085430543688401497, guid: 0a71551e75b1e9c4ca4acd1c4040b10a, type: 3}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff44fd9901b3d1408b566960c400bbb, type: 3}
+  m_Name: Level5Info
+  m_EditorClassIdentifier: 
+  displayName: Level 5 Final
+  enemiesQuantity: 25
+  enemiesLevel: 4
+  levelPrefab: {fileID: 3386805234486789736, guid: 3f2537ccf46d1b345aed95ef3ef91a48, type: 3}
+  playerCharacter: {fileID: 11400000, guid: 9739425e2fd61d242b3f879367c1424d, type: 2}
+  possibleEnemies:
+  - {fileID: 11400000, guid: 1ae7131915c21d34abd772fd76f9403a, type: 2}
+  - {fileID: 11400000, guid: be8d1cfa5fcaccb499355e1ba084d5b9, type: 2}
+  - {fileID: 11400000, guid: 48151bf3b94494343877acbc799ad6ec, type: 2}

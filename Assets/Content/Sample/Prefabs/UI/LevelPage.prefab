@@ -967,6 +967,8 @@ GameObject:
   m_Component:
   - component: {fileID: 952735464454688509}
   - component: {fileID: 1874820124788738952}
+  - component: {fileID: 1301081977514692159}
+  - component: {fileID: 8294124979701546484}
   m_Layer: 5
   m_Name: LevelPage
   m_TagString: Untagged
@@ -1014,15 +1016,119 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 1825b57250595ae4399599acea21a17b, type: 2}
         m_TargetAssemblyTypeName: Sample.LevelSystem, Assembly-CSharp
-        m_MethodName: CreateLevel
-        m_Mode: 2
+        m_MethodName: CreateNextLevel
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 565414cb223d59b429eec3e06cecbb71, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Sample.LevelInfo, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1301081977514692159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952735464454688510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018211e35c097664c92459dd65c1014d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b7a562abb8eb6d444af6887fa3d9db5a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1825b57250595ae4399599acea21a17b, type: 2}
+        m_TargetAssemblyTypeName: Sample.LevelSystem, Assembly-CSharp
+        m_MethodName: SetLastLevelResult
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 407bfc1ec2b1ff14e9c1f3832f1f8c86, type: 2}
+        m_TargetAssemblyTypeName: Core.UI.CanvasUISystem, Assembly-CSharp
+        m_MethodName: CloseTopUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 407bfc1ec2b1ff14e9c1f3832f1f8c86, type: 2}
+        m_TargetAssemblyTypeName: Core.UI.CanvasUISystem, Assembly-CSharp
+        m_MethodName: ShowUI
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: result
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &8294124979701546484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952735464454688510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018211e35c097664c92459dd65c1014d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 7d1ac69b823c84d4fbaec5c861742850, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1825b57250595ae4399599acea21a17b, type: 2}
+        m_TargetAssemblyTypeName: Sample.LevelSystem, Assembly-CSharp
+        m_MethodName: SetLastLevelResult
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 407bfc1ec2b1ff14e9c1f3832f1f8c86, type: 2}
+        m_TargetAssemblyTypeName: Core.UI.CanvasUISystem, Assembly-CSharp
+        m_MethodName: CloseTopUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 407bfc1ec2b1ff14e9c1f3832f1f8c86, type: 2}
+        m_TargetAssemblyTypeName: Core.UI.CanvasUISystem, Assembly-CSharp
+        m_MethodName: ShowUI
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: result
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1893080001303811883
 GameObject:
@@ -1263,6 +1369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144631796664496830}
   - component: {fileID: 6186711227478202156}
+  - component: {fileID: 2249983628436632544}
   m_Layer: 5
   m_Name: CoinsPanel
   m_TagString: Untagged
@@ -1306,6 +1413,34 @@ MonoBehaviour:
   saveSystem: {fileID: 11400000, guid: 342e8a9e807bfa748a79cbca0bed3e6c, type: 2}
   content: {fileID: 1178659548551692815}
   contentFormatString: Coins {0}
+--- !u!114 &2249983628436632544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703672940751739303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018211e35c097664c92459dd65c1014d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 53c7797fb4c6ec24c8995b69aaba2d28, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6186711227478202156}
+        m_TargetAssemblyTypeName: Sample.UI.CoinsPanel, Assembly-CSharp
+        m_MethodName: UpdatePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4993392448946526940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624670583314052913}
   - component: {fileID: 8788514493025352965}
+  - component: {fileID: 6583285951140905498}
   m_Layer: 5
   m_Name: EnemiesPanel
   m_TagString: Untagged
@@ -1359,6 +1495,34 @@ MonoBehaviour:
   levelSystem: {fileID: 11400000, guid: 1825b57250595ae4399599acea21a17b, type: 2}
   content: {fileID: 4448807307218267017}
   contentFormatString: Enemies {0}
+--- !u!114 &6583285951140905498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993392448946526940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018211e35c097664c92459dd65c1014d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: bdb947ffb061a76488d8971d73f64360, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8788514493025352965}
+        m_TargetAssemblyTypeName: Sample.UI.EnemiesPanel, Assembly-CSharp
+        m_MethodName: UpdatePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7781132695307530209
 GameObject:
   m_ObjectHideFlags: 0
